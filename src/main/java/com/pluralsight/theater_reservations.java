@@ -16,10 +16,10 @@ public class theater_reservations {
         String firstName = splitName[0];
         String lastName = splitName[1];
 
-        System.out.print("Date of show: ");
+        System.out.print("Date of show write it in this format(DD-MM-YYYY): ");
         String date = userInput.nextLine();
-        LocalDate dateReserved = LocalDate.parse(date);
-        System.out.println(date);
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate dateReserved = LocalDate.parse(date,format);
 
         System.out.print("Number of tickets: ");
         int ticketQuantity = userInput.nextInt();
@@ -27,7 +27,7 @@ public class theater_reservations {
         if (ticketQuantity == 1) {
             System.out.printf("%d ticket Reserved for - under %s, %s", ticketQuantity, lastName, firstName);
         } else{
-            System.out.printf("%d tickets Reserved for - under %s, %s", ticketQuantity, lastName, firstName);
+            System.out.printf("%d tickets Reserved for %tF under %s, %s", ticketQuantity,dateReserved, lastName, firstName);
         }
 
     }
