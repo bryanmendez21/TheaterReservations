@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Formatter;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class theater_reservations {
     public static void main(String[] args) {
@@ -11,6 +12,9 @@ public class theater_reservations {
 
         System.out.print("What is your full name: ");
         String fullName = userInput.nextLine();
+        String[] splitName = fullName.split(Pattern.quote(" "));
+        String firstName = splitName[0];
+        String lastname = splitName[1];
 
         System.out.print("Date of show: ");
         String date = userInput.nextLine();
@@ -20,7 +24,7 @@ public class theater_reservations {
         System.out.print("Number of tickets: ");
         int ticketQuantity = userInput.nextInt();
 
-      //  System.out.printf("%f tickets Reserved for",ticketQuantity);
+        System.out.printf("%f tickets Reserved for",ticketQuantity);
 
 
     }
