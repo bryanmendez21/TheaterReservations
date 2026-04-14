@@ -14,7 +14,7 @@ public class theater_reservations {
         String fullName = userInput.nextLine();
         String[] splitName = fullName.split(Pattern.quote(" "));
         String firstName = splitName[0];
-        String lastname = splitName[1];
+        String lastName = splitName[1];
 
         System.out.print("Date of show: ");
         String date = userInput.nextLine();
@@ -24,7 +24,7 @@ public class theater_reservations {
         System.out.print("Number of tickets: ");
         int ticketQuantity = userInput.nextInt();
 
-        System.out.printf("%f tickets Reserved for",ticketQuantity);
+        System.out.printf("%d tickets Reserved for - under %s, %s",ticketQuantity,lastName,firstName);
 
 
     }
