@@ -24,8 +24,11 @@ public class theater_reservations {
         System.out.print("Number of tickets: ");
         int ticketQuantity = userInput.nextInt();
 
-        System.out.printf("%d tickets Reserved for - under %s, %s",ticketQuantity,lastName,firstName);
-
+        if (ticketQuantity == 1) {
+            System.out.printf("%d ticket Reserved for - under %s, %s", ticketQuantity, lastName, firstName);
+        } else{
+            System.out.printf("%d tickets Reserved for - under %s, %s", ticketQuantity, lastName, firstName);
+        }
 
     }
 }
