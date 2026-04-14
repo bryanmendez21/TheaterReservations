@@ -2,11 +2,10 @@ package com.pluralsight;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Formatter;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class theater_reservations {
+public class theaterReservations {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
 
